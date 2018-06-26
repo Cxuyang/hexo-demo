@@ -40,21 +40,26 @@ categories: 前端
 	})
 ```
 
-## 通过axios代理
+## 通过Express代理
 
->通过axios代理
+>通过Express代理
 
 由于jsonp是一种非正式传输协议，不同于XMLHttpRequest一样需要按照CORS规范,并且配置相应header头文件进行传输。
 所以很多公司会对其API进行请求验证。以球球音乐为例,它会对请求header中的host以及referer进行验证,如图所示
 ![jsonp_axios](/img/jsonp/jsonp_axios.png)
 
-so,看了imocc关于这方面的代码。
+so,看了imooc关于这方面的代码。
 
-最后以`node server`作为中间层,通过axios代理,配置其header后再进行API的调用,以此方式来绕过host验证,从而获取到数据。
+最后以`express`框架做http中间代理转发前端请求,配置其header后再进行API的调用,以此方式来绕过host以及Referer验证,从而获取到数据。
 配置代码如下:
+
+>编译环境下
 
 vue工程的话,在`/build/webpack.dev.conf.js`中进行node server配置以及axios代理。
 react工程的话,在其`webpack配置文件`中配置。
+
+>线上环境在express配置文件下配置相应路由就行了
+
 ``` js
 //首先引入axios以及bodyParser
 const axios = require('axios')
@@ -114,7 +119,7 @@ export function getDiscList() {
   })
 }
 ```
-实现原理:1.调用`getDiscList`方法。2.请求node server服务配置地址。3.通过回调函数返回数据。
+实现原理:1.调用`getDiscList`方法。2.请求`Express`代理服务配置地址。3.通过回调函数返回数据。
 
 以上有错误的地方,或者不懂的地方,欢迎来我的微博给我留言。
 
