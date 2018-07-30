@@ -5,7 +5,7 @@ type: "about"
 ---
 >Hello,this is Cxuyang 
 
-前端开发猴，业余vlogger，Acer，贴吧、steam活跃成员，overwatch鱼塘选手，吉他手残爱好者。
+前端开发猴，业余vlogger，Acer，贴吧活跃成员，overwatch鱼塘选手，吉他手残爱好者。
 
 >学习和项目经历
 
@@ -17,12 +17,14 @@ type: "about"
 
 ### 其他
 
+* linux系统以及运维方面相关知识的学习
 * 通过hexo和github page 搭建自己的blog
 * 学习并实践css预处理器 stylus 
 
 ### 酉辰科技有限公司
 
-* 数据库管理系统【vue+vue-router+vuex+webpack+element-ui】
+* 基于大数据的智能无线电监测系统【vue+vue-router+vuex+stylus+webpack+element-ui】
+* 数据库管理系统【vue+vue-router+vuex+stylus+webpack+element-ui】
 * 数据分析管理系统vue重构【vue+vue-router+vuex+webpack+element-ui】
 
 ## 2017年
