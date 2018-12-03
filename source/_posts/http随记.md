@@ -121,6 +121,42 @@ g.参数部分：从“？”开始到“#”为止之间的部分为参数部�
 1. 设置后, 多个http请求共用一个tcp链接(chorme为最多支持6个并发的http请求)
 2. http2.0 支持一个tcp链接 可以多个http请求
 
+### 8.数据协商(客服端发送请求,表明想要什么类型的数据)
+
+>请求
+
+1. Accept 想要的数据类型
+2. ACCEPT-Encoding  编码方式(压缩方式, gzip,deflate,br)
+3. Accept-Language  语言
+4. User-Agent  移动端或者PC端
+5. Content-Type  传送的数据格式
+...
+
+>返回
+
+1. Content  服务器端返回的数据类型
+2. Content-Type  返回的数据格式
+3. Content-Encoding  返回的编码方式(压缩方式, gzip,deflate,br)
+4. Content-Language  返回的语言
+5. X-Content-Type-Options: nosniff   告诉浏览器不要猜测返回数据类型
+...
+
+![accept-content](https://github.com/Cxuyang/hexo-demo/blob/master/source/img/http/accept-content.png)
+
+### 8.Redirect(重定向)
+
+``` js
+if (request.url === '/') {
+  // stateCode(状态码): 301-永久重定向,清除浏览器缓存消失; 302-每次都会进入浏览器进行跳转
+  let stateCode = '301'
+  response.writeHead(stateCode. {
+    'Location': '/new'
+  })
+  response.end('')
+}
+```
+
+
 ### 以后再补充
 
 ## End
