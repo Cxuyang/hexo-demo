@@ -130,7 +130,7 @@ g.参数部分：从“？”开始到“#”为止之间的部分为参数部�
 3. Accept-Language  语言
 4. User-Agent  移动端或者PC端
 5. Content-Type  传送的数据格式
-...
+6. ...
 
 >返回
 
@@ -139,11 +139,11 @@ g.参数部分：从“？”开始到“#”为止之间的部分为参数部�
 3. Content-Encoding  返回的编码方式(压缩方式, gzip,deflate,br)
 4. Content-Language  返回的语言
 5. X-Content-Type-Options: nosniff   告诉浏览器不要猜测返回数据类型
-...
+6. ...
 
 ![accept-content](https://github.com/Cxuyang/hexo-demo/blob/master/source/img/http/accept-content.png)
 
-### 8.Redirect(重定向)
+### 9.Redirect(重定向)
 
 ``` js
 if (request.url === '/') {
