@@ -2,44 +2,44 @@
 title: HTTP随记
 date: 2018-11-23 09:01:30
 tags:
-  - http
+  - HTTP
   - 前端
   - Nginx
 categories: 前端
 ---
 ## 前言
 
-基础知识回顾http篇
+基础知识回顾HTTP篇
 
 ### 1.http协议基础及发展历史
 
-#### 1.1http发展历史
+#### 1.1HTTP发展历史
 
-##### http 0.9
+##### HTTP 0.9
 
 1. 只有一个命令（GET）
 2. 没有header等描述数据的信息
 3. 服务器发送完毕,就关闭TCP连接
 
-##### http 1.0
+##### HTTP 1.0
 
 1. 增加了很多命令(POST,PUT等)
 2. 增加status code 和 header
 3. 多字符集支持、多部分发送、权限、缓存等
 
-##### http 1.1
+##### HTTP 1.1
 
-1. 支持了持久连接(http请求后可以不关闭tcp连接)
-2. Pipeline(在同一个tcp连接里可以支持多个http请求)
+1. 支持了持久连接(HTTP请求后可以不关闭tcp连接)
+2. Pipeline(在同一个tcp连接里可以支持多个HTTP请求)
 2. 增加host和其他一些命令
 
-##### http 2.0(暂未普及)
+##### HTTP 2.0(暂未普及)
 
 1. 所有数据以二进制传输
 2. 同一个连接里面发送多个请求不在需要按照顺序来
 3. 头信息压缩以及推送等提高效率的功能(推送:服务器端主动向前端推送数据)
 
-#### 1.2http协议基础
+#### 1.2HTTP协议基础
 
 ![requestProcess](https://github.com/Cxuyang/hexo-demo/blob/master/source/img/http/request.png)
 
