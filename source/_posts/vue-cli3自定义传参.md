@@ -20,6 +20,7 @@ categories: 前端
 虽然叫做自定义传参，不过方法是在webpack中使用DefinePlugin设定环境变量,然后在main.js中读取就行
 
 ``` vue.config.js
+/* vue.config.js */
 const webpack = require('webpack')
 const arg = process.argv[process.argv.length - 1]
 module.exports = {
@@ -34,6 +35,7 @@ module.exports = {
 ```
 
 ``` main.js
+/* main.js */
 console.log(EnvParams)
 ```
 
