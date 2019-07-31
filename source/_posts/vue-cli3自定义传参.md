@@ -34,9 +34,15 @@ module.exports = {
 }
 ```
 
+``` 命令行
+/* 命令行 */
+npx vue-cli-service serve --test=123
+(注: 使用npm run serve --test=123依然取不到参数)
+```
+
 ``` main.js
 /* main.js */
-console.log(EnvParams)
+console.log(EnvParams) // --test=123
 ```
 
 ## End
