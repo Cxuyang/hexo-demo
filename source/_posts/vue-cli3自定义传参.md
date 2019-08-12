@@ -37,6 +37,8 @@ module.exports = {
 ``` 命令行
 /* 命令行 */
 npx vue-cli-service serve --test=123
+or
+npm run serve -- --test=123
 (注: 使用npm run serve --test=123依然取不到参数)
 ```
 
