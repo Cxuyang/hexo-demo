@@ -43,6 +43,9 @@ categories: 前端
 
 ![requestProcess](https://github.com/Cxuyang/hexo-demo/blob/master/source/img/http/request.png)
 
+1.如果直接访问域名则还是会先进行dns解析，再进行其他操作。如果是IP就会跳过dns解析，随后判断是否有重定向
+2.dns缓存
+
 ![model](https://github.com/Cxuyang/hexo-demo/blob/master/source/img/http/model.png)
 1. 低三层
 a. 物理层: 物理层主要作用是定义物理设备如何传输数据(网线,网卡,电脑等硬件)
